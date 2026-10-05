@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autoservis a pneuservis Česká Lípa | Autoservis Žahourek Jan, Mariánská 3103</title>
+<meta name="description" content="Autoservis, pneuservis, klimatizace, laserová geometrie a diagnostika v České Lípě. Mariánská 3103, pondělí až pátek 8–16, telefon 777 885 475.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Autoservis Žahourek Jan — autoservis a pneuservis v České Lípě">
+<meta property="og:description" content="Mariánská 3103, Česká Lípa. Pondělí až pátek 8–16, telefon 777 885 475.">
+<meta property="og:url" content="https://vladislavzachariev-oss.github.io/autoservis-zahourek/">
+<meta property="og:image" content="https://vladislavzachariev-oss.github.io/autoservis-zahourek/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#151515">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/dilna-1100.webp" imagesrcset="img/dilna-640.webp 640w, img/dilna-1100.webp 1100w, img/dilna-2000.webp 2000w" imagesizes="(min-width:76rem) 70rem, 100vw" type="image/webp">
+<style>
+:root{
+  color-scheme:light;
+  --zluta:#f7d417;
+  --cerna:#151515;
+  --bila:#ffffff;
+  --papir:#f4f3ef;
+  --seda:#5a5a57;
+  --linka:#d9d7d0;
+  --pad:clamp(1.1rem,4.5vw,3rem);
+  --font:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bila);color:var(--cerna);font:400 1.0625rem/1.55 var(--font);overflow-wrap:break-word}
+h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote,table{margin:0}
+ul,ol{padding:0;list-style:none}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:3px}
+:focus-visible{outline:3px solid var(--cerna);outline-offset:3px}
+.tmava :focus-visible,.lista :focus-visible,.pata :focus-visible,.svetlo :focus-visible{outline-color:var(--zluta)}
+.frame{max-width:74rem;margin-inline:auto;padding-inline:var(--pad)}
+.skok{position:absolute;left:-999rem}
+.skok:focus{left:.5rem;top:.5rem;z-index:20;background:var(--bila);padding:.6rem .9rem}
+.napis{font-weight:900;font-stretch:80%;text-transform:uppercase;line-height:.9;letter-spacing:-.005em}
+
+/* lišta */
+.lista{position:sticky;top:0;z-index:10;background:var(--cerna);color:var(--bila)}
+.lista .frame{display:flex;align-items:center;justify-content:space-between;gap:.75rem 1.5rem;min-height:3.5rem}
+.menu{display:flex;gap:clamp(.85rem,3.4vw,2rem);font-weight:600;font-size:1rem}
+.menu a{text-decoration:none;padding:.9rem 0;border-bottom:3px solid transparent;margin-bottom:-3px}
+.menu a:hover{border-bottom-color:var(--zluta)}
+.lista-tel{background:var(--zluta);color:var(--cerna);font-weight:800;font-size:1.0625rem;text-decoration:none;padding:.5rem .8rem;border-radius:2px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.lista-tel:hover{background:var(--bila)}
+.lista-tel span{font-weight:500}
+
+/* úvod: nápis, telefon, pod tím fotka */
+.uvod{position:relative;padding-top:clamp(1.5rem,4vw,2.25rem)}
+.uvod::before{content:"";position:absolute;inset:0 0 clamp(4rem,14vw,9rem) 0;background:var(--zluta)}
+.uvod > *{position:relative}
+.uvod-hlava{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;padding-bottom:clamp(1.25rem,3.5vw,2rem)}
+.uvod-hlava > *{min-width:0}
+h1{font-size:clamp(2.75rem,12.4vw,6.25rem)}
+h1 span{display:block}
+.uvod-bok{display:grid;grid-template-columns:minmax(0,1fr);gap:.8rem;align-content:end;justify-items:start}
+.uvod-co{font-size:1.125rem;line-height:1.4;font-weight:500;max-width:24rem}
+.volat{display:block;background:var(--cerna);color:var(--bila);text-decoration:none;padding:.7rem 1.1rem .8rem;border-radius:2px}
+.volat-pop{display:block;font-weight:500;font-size:.9375rem;line-height:1.2}
+.volat-cislo{display:block;color:var(--zluta);font-weight:900;font-stretch:85%;font-size:clamp(2.1rem,9.5vw,2.9rem);line-height:1.05;white-space:nowrap;font-variant-numeric:tabular-nums}
+.volat:hover .volat-cislo{color:var(--bila)}
+.ted{font-weight:600;font-size:1rem;display:flex;align-items:baseline;gap:.5rem}
+.ted i{flex:none;width:.65rem;height:.65rem;border-radius:50%;background:var(--cerna);transform:translateY(-.02rem)}
+.ted.zavreno i{background:none;box-shadow:inset 0 0 0 2px var(--cerna)}
+.uvod-foto img{width:100%;aspect-ratio:2000/1179;object-fit:cover;background:#8f9aa3;border-radius:2px}
+.uvod-foto figcaption{padding-top:.6rem;color:var(--seda);font-size:.9375rem}
+
+/* pásy */
+.pas{padding-block:clamp(2.75rem,7vw,5rem)}
+.pas h2{font-size:clamp(2.2rem,7.5vw,3.75rem)}
+.dvoj{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem 3.5rem}
+.dvoj > *{min-width:0}
+.k-nadpisu{margin-top:1rem;max-width:21rem;color:var(--seda)}
+.k-nadpisu strong{color:var(--cerna);font-weight:700}
+
+/* služby */
+.prace{display:grid;grid-template-columns:minmax(0,1fr);column-gap:2.5rem}
+.prace li{border-top:2px solid var(--cerna);padding:.85rem 0 1.15rem;min-width:0}
+.prace h3{font-weight:800;font-stretch:88%;font-size:1.5rem;line-height:1.1;text-transform:uppercase}
+.prace p{margin-top:.3rem;color:var(--seda);max-width:26rem}
+.prace .zdarma h3{display:inline;background:var(--zluta);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.05em .3em;margin-left:-.3em}
+.prace .zdarma p{margin-top:.45rem}
+.take{border-top:2px solid var(--cerna);padding-top:.9rem;max-width:44rem}
+
+/* fotky */
+.tmava{background:var(--cerna);color:var(--bila)}
+.tmava h2{color:var(--zluta)}
+.fot-hlava{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;margin-bottom:1.5rem}
+.fot-hlava p{color:#c9c7c0;max-width:26rem}
+.fotky{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+.fotky a{display:block;position:relative;min-width:0;background:#2a2a2a}
+.fotky img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.fotky a:hover img,.fotky a:focus-visible img{outline:4px solid var(--zluta);outline-offset:-4px}
+
+/* recenze */
+.zluty{background:var(--zluta)}
+.cislo{font-weight:900;font-stretch:80%;font-size:clamp(5.5rem,22vw,10rem);line-height:.82;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.cislo-pop{margin-top:.8rem;font-weight:600;max-width:19rem}
+.dalsi-hod{margin-top:1.1rem;max-width:19rem;padding-top:.9rem;border-top:2px solid var(--cerna)}
+.dalsi-hod a{font-weight:600}
+.hlasy{display:grid;grid-template-columns:minmax(0,1fr);gap:0 2.5rem}
+.hlas{border-top:2px solid var(--cerna);padding:1rem 0 1.4rem;min-width:0}
+.hlas blockquote{font-size:1.1875rem;line-height:1.45;font-weight:500}
+.hlas blockquote::before{content:"\201E"}
+.hlas blockquote::after{content:"\201C"}
+.hlas figcaption{margin-top:.6rem;font-weight:800}
+.hlas figcaption span{font-weight:500}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem 3rem;margin-top:1.75rem}
+.kontakt > *{min-width:0}
+.kontakt h3{font-weight:800;font-stretch:88%;text-transform:uppercase;font-size:1.0625rem;letter-spacing:.02em;margin-bottom:.6rem}
+.adresa{font-size:1.25rem;line-height:1.35;font-weight:600}
+.spoj{margin-top:.9rem;display:grid;gap:.25rem;font-size:1.125rem}
+.spoj a{font-weight:700}
+.tlac{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.1rem}
+.tlac a{display:inline-flex;align-items:center;min-height:2.875rem;padding:0 1rem;border:2px solid var(--cerna);border-radius:2px;text-decoration:none;font-weight:700}
+.tlac a:first-child{background:var(--cerna);color:var(--bila)}
+.tlac a:hover{background:var(--zluta);color:var(--cerna)}
+.hodiny{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hodiny th,.hodiny td{padding:.5rem 0;border-bottom:1px solid var(--linka);text-align:left;font-weight:400}
+.hodiny td{text-align:right}
+.hodiny tr.dnes th,.hodiny tr.dnes td{font-weight:800;border-bottom:2px solid var(--cerna)}
+.hodiny tr.dnes th::after{content:" (dnes)";font-weight:500}
+.svatky{margin-top:.9rem;color:var(--seda)}
+.svatky strong{color:var(--cerna)}
+.mapa{position:relative;background:var(--papir);min-height:19rem;border-radius:2px;overflow:hidden}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ico{margin-top:1.1rem;color:var(--seda);font-size:.9375rem}
+
+.pata{background:var(--cerna);color:#c9c7c0;font-size:.9375rem}
+.pata .frame{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem 2rem;padding-block:1.2rem 1.5rem}
+.pata strong{color:var(--bila);font-weight:700}
+
+/* zvětšená fotka */
+.svetlo{border:0;padding:0;margin:0;width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;background:rgba(10,10,10,.96);color:var(--bila)}
+.svetlo::backdrop{background:#0a0a0a}
+.svetlo[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto}
+.svetlo-nahore,.svetlo-dole{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem var(--pad)}
+.svetlo-stred{display:grid;place-items:center;min-height:0;padding-inline:.5rem}
+.svetlo-stred img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.svetlo button{font:700 1rem/1 var(--font);color:var(--cerna);background:var(--zluta);border:0;border-radius:2px;min-height:2.75rem;padding:0 1rem;cursor:pointer}
+.svetlo button:hover{background:var(--bila)}
+.svetlo-popis{font-weight:500}
+
+@media (min-width:34rem){
+  .prace{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fotky{grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+}
+@media (min-width:44rem){
+  .hlasy{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kontakt{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mapa{grid-column:1 / -1;min-height:22rem}
+}
+@media (min-width:58rem){
+  .dvoj{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}  .kontakt{grid-template-columns:minmax(0,5fr) minmax(0,5fr) minmax(0,7fr)}
+  .mapa{grid-column:auto;min-height:100%}
+}
+@media (min-width:74rem){
+  .uvod-hlava{grid-template-columns:minmax(0,1fr) auto;column-gap:2.5rem;align-items:end}
+  .uvod-co{max-width:19rem}
+  .uvod-bok{padding-bottom:.35rem}
+}
+@media (max-width:33.99rem){
+  body{padding-bottom:3.5rem}
+  .menu{width:100%;justify-content:space-between;gap:.5rem}
+  .lista-tel{position:fixed;left:0;right:0;bottom:0;z-index:10;border-radius:0;text-align:center;font-size:1.1875rem;
+    padding:.8rem 1rem calc(.8rem + env(safe-area-inset-bottom));border-top:2px solid var(--cerna)}
+  .lista-tel.schovat{visibility:hidden}
+}
+@media (prefers-reduced-motion:no-preference){
+  .lista-tel,.volat-cislo,.tlac a,.svetlo button{transition:background-color .15s,color .15s}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Autoservis/Pneuservis Jan Žahourek",
+  "alternateName": "Autoservis Žahourek Jan",
+  "image": "https://vladislavzachariev-oss.github.io/autoservis-zahourek/og.jpg",
+  "telephone": "+420 777 885 475",
+  "email": "kawazahy@seznam.cz",
+  "identifier": {"@type": "PropertyValue", "propertyID": "IČO", "value": "70699623"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mariánská 3103",
+    "postalCode": "470 01",
+    "addressLocality": "Česká Lípa",
+    "addressCountry": "CZ"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 50.696681, "longitude": 14.540724},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:00"}
+  ],
+  "paymentAccepted": "Hotovost, platební karta",
+  "areaServed": "Česká Lípa",
+  "hasMap": "https://www.google.com/maps/place/Autoservis%2FPneuservis+Jan+%C5%BDahourek/data=!4m7!3m6!1s0x47096c07bae4b7cd:0xfc0bbeb6a4988a66!8m2!3d50.6966809!4d14.5407244!16s%2Fg%2F11cscc1x3h!19sChIJzbfkugdsCUcRZoqYpLa-C_w",
+  "sameAs": ["https://www.firmy.cz/detail/13107407-jan-zahourek-autoservis-ceska-lipa.html"],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "bestRating": "5", "worstRating": "1", "ratingCount": "76"},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Co děláme",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Autoservis"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pneuservis a uskladnění pneumatik"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Servis a plnění klimatizací"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laserová geometrie"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Výměny a generální opravy motorů"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Diagnostika"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kontrola vozu zdarma"}}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<a class="skok" href="#sluzby">Přeskočit na obsah</a>
+
+<header class="lista">
+  <div class="frame">
+    <nav class="menu" aria-label="Části stránky">
+      <a href="#sluzby">Služby</a>
+      <a href="#fotky">Fotky</a>
+      <a href="#recenze">Recenze</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="lista-tel" href="tel:+420777885475"><span>Volejte </span>777&nbsp;885&nbsp;475</a>
+  </div>
+</header>
+
+<main>
+
+<section class="uvod" aria-labelledby="jmeno">
+  <div class="frame uvod-hlava">
+    <h1 class="napis" id="jmeno"><span>Autoservis</span> <span>Žahourek Jan</span></h1>
+    <div class="uvod-bok">
+      <p class="uvod-co">Autoservis a&nbsp;pneuservis v&nbsp;České Lípě. Osobní auta, dodávky, SUV a&nbsp;4×4 všech značek.</p>
+      <a class="volat" href="tel:+420777885475">
+        <span class="volat-pop">Zavolejte nám</span>
+        <span class="volat-cislo">777&nbsp;885&nbsp;475</span>
+      </a>
+      <p class="ted" id="ted"><i aria-hidden="true"></i><span>Pondělí až pátek 8–16</span></p>
+    </div>
+  </div>
+  <figure class="frame uvod-foto">
+    <picture>
+      <source type="image/webp" srcset="img/dilna-640.webp 640w, img/dilna-1100.webp 1100w, img/dilna-2000.webp 2000w" sizes="(min-width:76rem) 70rem, 100vw">
+      <img src="img/dilna-1100.jpg" srcset="img/dilna-640.jpg 640w, img/dilna-1100.jpg 1100w, img/dilna-2000.jpg 2000w" sizes="(min-width:76rem) 70rem, 100vw" width="2000" height="1179" alt="Budova autoservisu v Mariánské ulici v České Lípě se žlutými cedulemi Autoservis, Servis a plnění klimatizací, Jan Žahourek 777 885 475" fetchpriority="high">
+    </picture>
+    <figcaption>Mariánská 3103, Česká Lípa. Poznáte nás podle žlutých cedulí.</figcaption>
+  </figure>
+</section>
+
+<section class="pas" id="sluzby" aria-labelledby="sluzby-h">
+  <div class="frame dvoj">
+    <div>
+      <h2 class="napis" id="sluzby-h">Co děláme</h2>
+      <p class="k-nadpisu"><strong>Osobní auta, dodávky, SUV, 4×4 a&nbsp;off-road všech značek.</strong> Platit můžete i&nbsp;kartou.</p>
+    </div>
+    <div>
+      <ul class="prace">
+        <li><h3>Autoservis</h3><p>Opravy aut všech značek, od rozvodů po spojky.</p></li>
+        <li><h3>Pneuservis</h3><p>Přezutí a&nbsp;uskladnění pneumatik.</p></li>
+        <li><h3>Klimatizace</h3><p>Servis a&nbsp;plnění, staré i&nbsp;nové chladivo (R134a i&nbsp;R1234yf).</p></li>
+        <li><h3>Laserová geometrie</h3><p>Měření a&nbsp;seřízení geometrie kol.</p></li>
+        <li><h3>Motory</h3><p>Výměny motorů a&nbsp;generální opravy.</p></li>
+        <li><h3>Diagnostika</h3><p>U&nbsp;osobních aut i&nbsp;dodávek, všech značek.</p></li>
+        <li class="zdarma"><h3>Kontrola vozu zdarma</h3><p>Zastavte se, za prohlídku auta nic neplatíte.</p></li>
+      </ul>
+      <p class="take">Děláme také autoskla, výfuky, přípravu na STK, montáž tažných zařízení a&nbsp;repase alternátorů a&nbsp;startérů.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pas tmava" id="fotky" aria-labelledby="fotky-h">
+  <div class="frame">
+    <div class="fot-hlava">
+      <h2 class="napis" id="fotky-h">Dílna</h2>
+      <p>Zvedáky, pneuservis a&nbsp;plnička klimatizací. Fotku zvětšíte kliknutím.</p>
+    </div>
+    <ul class="fotky" id="galerie">
+      <li><a href="img/zvedak-auto.jpg" data-popis="Auto na zvedáku"><picture><source type="image/webp" srcset="img/zvedak-auto-m.webp"><img src="img/zvedak-auto-m.jpg" width="720" height="540" loading="lazy" alt="Modré auto na zvedáku v dílně"></picture></a></li>
+      <li><a href="img/zvedaky.jpg" data-popis="Zvedáky v hlavní hale"><picture><source type="image/webp" srcset="img/zvedaky-m.webp"><img src="img/zvedaky-m.jpg" width="720" height="540" loading="lazy" alt="Dva modré zvedáky a pracovní stoly v hlavní hale"></picture></a></li>
+      <li><a href="img/hala.jpg" data-popis="Hlavní hala"><picture><source type="image/webp" srcset="img/hala-m.webp"><img src="img/hala-m.jpg" width="720" height="540" loading="lazy" alt="Pohled do hlavní haly dílny"></picture></a></li>
+      <li><a href="img/vyvazovacka.jpg" data-popis="Vyvažovačka kol"><picture><source type="image/webp" srcset="img/vyvazovacka-m.webp"><img src="img/vyvazovacka-m.jpg" width="720" height="540" loading="lazy" alt="Vyvažovačka kol v pneuservisu"></picture></a></li>
+      <li><a href="img/pneuservis.jpg" data-popis="Pneuservis"><picture><source type="image/webp" srcset="img/pneuservis-m.webp"><img src="img/pneuservis-m.jpg" width="720" height="540" loading="lazy" alt="Vyvažovačka a zouvačka pneumatik"></picture></a></li>
+      <li><a href="img/klimatizace.jpg" data-popis="Plnička klimatizací"><picture><source type="image/webp" srcset="img/klimatizace-m.webp"><img src="img/klimatizace-m.jpg" width="720" height="540" loading="lazy" alt="Plnička klimatizací"></picture></a></li>
+      <li><a href="img/vjezd.jpg" data-popis="Vjezd do dílny"><picture><source type="image/webp" srcset="img/vjezd-m.webp"><img src="img/vjezd-m.jpg" width="720" height="540" loading="lazy" alt="Otevřená vrata dílny, uvnitř auta na zvedácích"></picture></a></li>
+      <li><a href="img/cedule.jpg" data-popis="Cedule u příjmu zakázek"><picture><source type="image/webp" srcset="img/cedule-m.webp"><img src="img/cedule-m.jpg" width="720" height="540" loading="lazy" alt="Žlutá cedule se seznamem prací u příjmu zakázek"></picture></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pas zluty" id="recenze" aria-labelledby="recenze-h">
+  <div class="frame dvoj">
+    <div>
+      <h2 class="napis" id="recenze-h">Recenze</h2>
+      <p class="cislo" aria-hidden="true">4,6</p>
+      <p class="cislo-pop">Průměr 4,6 ze 76 hodnocení na Googlu. Pět hvězd dalo 65 z&nbsp;nich.</p>
+      <p class="dalsi-hod">Na Firmy.cz 4,9 ze 14 hodnocení a&nbsp;2.&nbsp;místo mezi autoservisy v&nbsp;České Lípě za rok 2025.<br><a href="https://www.google.com/maps/place/Autoservis%2FPneuservis+Jan+%C5%BDahourek/data=!4m7!3m6!1s0x47096c07bae4b7cd:0xfc0bbeb6a4988a66!8m2!3d50.6966809!4d14.5407244!16s%2Fg%2F11cscc1x3h!19sChIJzbfkugdsCUcRZoqYpLa-C_w" target="_blank" rel="noopener">Všechny recenze na Googlu</a></p>
+    </div>
+    <div class="hlasy">
+      <figure class="hlas">
+        <blockquote>Jediný servis kde mě vzali bez objednání.. spadl mi kryt podlahy.. rychlá demontáž. Za mně spokojenost.. příště až mi spadne druhá strana tak vím kam mám jet:-)</blockquote>
+        <figcaption>Jaroslav M. <span>· Google</span></figcaption>
+      </figure>
+      <figure class="hlas">
+        <blockquote>Má osobní zkušenost je jen pozitivní. Spolehlivé, rychlé a&nbsp;profesionální jednání. Auto po opravě druhý den k&nbsp;dispozici. Korektní komunikace se zákazníkem.</blockquote>
+        <figcaption>Gabriela F. <span>· Google</span></figcaption>
+      </figure>
+      <figure class="hlas">
+        <blockquote>Velká spokojenost. Ochota mechaniků, slušné chování. Auto opraveno do druhého dne. Ceny dobré. Jezdíme pravidelně, není co vytknout.</blockquote>
+        <figcaption>Renca S. <span>· Firmy.cz</span></figcaption>
+      </figure>
+      <figure class="hlas">
+        <blockquote>Moc děkujeme za rychlou pomoc v&nbsp;autoservisu pana Žahourka. Velice příjemný a&nbsp;ochotný pán. Děkujeme!!</blockquote>
+        <figcaption>Olga Š. <span>· Google</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="pas" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="frame">
+    <h2 class="napis" id="kontakt-h">Kde nás najdete</h2>
+    <div class="kontakt">
+      <div>
+        <h3>Adresa a&nbsp;telefon</h3>
+        <p class="adresa">Mariánská 3103,<br>470&nbsp;01 Česká Lípa&nbsp;1</p>
+        <p class="spoj">
+          <a href="tel:+420777885475">777&nbsp;885&nbsp;475</a>
+          <a href="mailto:kawazahy@seznam.cz">kawazahy@seznam.cz</a>
+        </p>
+        <p class="tlac">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Autoservis%2FPneuservis+Jan+%C5%BDahourek%2C+Mari%C3%A1nsk%C3%A1+3103%2C+%C4%8Cesk%C3%A1+L%C3%ADpa&amp;destination_place_id=ChIJzbfkugdsCUcRZoqYpLa-C_w" target="_blank" rel="noopener">Navigovat</a>
+          <a href="https://www.google.com/maps/place/Autoservis%2FPneuservis+Jan+%C5%BDahourek/data=!4m7!3m6!1s0x47096c07bae4b7cd:0xfc0bbeb6a4988a66!8m2!3d50.6966809!4d14.5407244!16s%2Fg%2F11cscc1x3h!19sChIJzbfkugdsCUcRZoqYpLa-C_w" target="_blank" rel="noopener">Mapy Google</a>
+        </p>
+        <p class="ico">Jan Žahourek, IČO 70699623</p>
+      </div>
+      <div>
+        <h3>Otevírací doba</h3>
+        <table class="hodiny">
+          <tbody>
+            <tr data-d="1"><th scope="row">Pondělí</th><td>8:00–16:00</td></tr>
+            <tr data-d="2"><th scope="row">Úterý</th><td>8:00–16:00</td></tr>
+            <tr data-d="3"><th scope="row">Středa</th><td>8:00–16:00</td></tr>
+            <tr data-d="4"><th scope="row">Čtvrtek</th><td>8:00–16:00</td></tr>
+            <tr data-d="5"><th scope="row">Pátek</th><td>8:00–16:00</td></tr>
+            <tr data-d="6"><th scope="row">Sobota</th><td>po telefonické domluvě</td></tr>
+            <tr data-d="0"><th scope="row">Neděle</th><td>zavřeno</td></tr>
+          </tbody>
+        </table>
+        <p class="svatky"><strong>O&nbsp;svátcích pracujeme</strong>, stačí předem zavolat. Zavřeno máme jen o&nbsp;Velikonocích a&nbsp;o&nbsp;Vánocích.</p>
+      </div>
+      <div class="mapa">
+        <iframe title="Autoservis Žahourek Jan na mapě Google" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://www.google.com/maps?q=Autoservis%2FPneuservis+Jan+%C5%BDahourek%2C+Mari%C3%A1nsk%C3%A1+3103%2C+%C4%8Cesk%C3%A1+L%C3%ADpa&amp;z=16&amp;hl=cs&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pata">
+  <div class="frame">
+    <p><strong>Autoservis Žahourek Jan</strong> · Mariánská 3103, Česká Lípa · <a href="tel:+420777885475">777&nbsp;885&nbsp;475</a></p>
+    <p>Ukázka webu — Vladislav Zachariev</p>
+  </div>
+</footer>
+
+<dialog class="svetlo" id="svetlo" aria-label="Zvětšená fotka">
+  <div class="svetlo-nahore">
+    <span class="svetlo-popis" id="svetlo-popis"></span>
+    <button type="button" id="svetlo-zavrit">Zavřít</button>
+  </div>
+  <div class="svetlo-stred"><img id="svetlo-img" alt=""></div>
+  <div class="svetlo-dole">
+    <button type="button" id="svetlo-zpet" aria-label="Předchozí fotka">&larr; Předchozí</button>
+    <button type="button" id="svetlo-dal" aria-label="Další fotka">Další &rarr;</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  // čas v Česku, ať stránka říká pravdu i návštěvníkovi z ciziny
+  var p={};
+  try{
+    new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Prague',weekday:'short',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',hour12:false})
+      .formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+  }catch(e){return}
+  var den=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday),
+      y=+p.year,m=+p.month,d=+p.day,min=(+p.hour%24)*60+(+p.minute);
+  if(den<0)return;
+  var radek=document.querySelector('.hodiny tr[data-d="'+den+'"]');
+  if(radek)radek.classList.add('dnes');
+
+  // Velikonoce (Velký pátek až Velikonoční pondělí) a Vánoce 24.–26. 12.
+  function nedele(r){var a=r%19,b=Math.floor(r/100),c=r%100,e=Math.floor(b/4),f=b%4,g=Math.floor((b+8)/25),
+    h=Math.floor((b-g+1)/3),i=(19*a+b-e-h+15)%30,k=Math.floor(c/4),l=c%4,n=(32+2*f+2*k-i-l)%7,
+    o=Math.floor((a+11*i+22*n)/451),mm=Math.floor((i+n-7*o+114)/31),dd=((i+n-7*o+114)%31)+1;
+    return Date.UTC(r,mm-1,dd)}
+  function volno(yy,mo,dd){
+    if(mo===12&&dd>=24&&dd<=26)return true;
+    var roz=Math.round((Date.UTC(yy,mo-1,dd)-nedele(yy))/864e5);
+    return roz>=-2&&roz<=1;
+  }
+  var SVATKY=['1.1','1.5','8.5','5.7','6.7','28.9','28.10','17.11'];
+  function svatek(mo,dd){return SVATKY.indexOf(dd+'.'+mo)>-1}
+  var el=document.getElementById('ted'),text=el&&el.querySelector('span');
+  if(!text)return;
+  if(den>=1&&den<=5&&svatek(m,d)){el.classList.add('zavreno');text.textContent='Dnes je svátek, otevřeno po telefonické domluvě';return}
+  var pracovni=den>=1&&den<=5&&!volno(y,m,d);
+  if(pracovni&&min>=480&&min<960){
+    text.textContent='Teď máme otevřeno, dnes do 16:00';
+  }else{
+    el.classList.add('zavreno');
+    if(pracovni&&min<480){text.textContent='Otevíráme dnes v 8:00';}
+    else{
+      var jm=['v neděli','v pondělí','v úterý','ve středu','ve čtvrtek','v pátek','v sobotu'],kdy='';
+      for(var i=1;i<=10;i++){
+        var t=new Date(Date.UTC(y,m-1,d+i)),w=t.getUTCDay();
+        if(w>=1&&w<=5&&!volno(t.getUTCFullYear(),t.getUTCMonth()+1,t.getUTCDate())&&!svatek(t.getUTCMonth()+1,t.getUTCDate())){kdy=i===1?'zítra':jm[w];break}
+      }
+      text.textContent='Teď je zavřeno'+(kdy?', otevíráme '+kdy+' v 8:00':'');
+    }
+  }
+})();
+
+(function(){
+  // na mobilu je tlačítko Volejte přilepené dole; dokud je vidět velké číslo nahoře, není potřeba dvakrát
+  var velke=document.querySelector('.volat'),male=document.querySelector('.lista-tel');
+  if(!velke||!male||!('IntersectionObserver' in window))return;
+  new IntersectionObserver(function(z){male.classList.toggle('schovat',z[0].isIntersecting)}).observe(velke);
+})();
+
+(function(){
+  var dlg=document.getElementById('svetlo'),odkazy=[].slice.call(document.querySelectorAll('#galerie a'));
+  if(!dlg||!dlg.showModal||!odkazy.length)return;
+  var img=document.getElementById('svetlo-img'),popis=document.getElementById('svetlo-popis'),ktera=0;
+  function ukaz(i){
+    ktera=(i+odkazy.length)%odkazy.length;
+    var a=odkazy[ktera];
+    img.src=a.getAttribute('href');
+    img.alt=a.querySelector('img').alt;
+    popis.textContent=a.getAttribute('data-popis')+' ('+(ktera+1)+' z '+odkazy.length+')';
+  }
+  odkazy.forEach(function(a,i){a.addEventListener('click',function(e){e.preventDefault();ukaz(i);dlg.showModal()})});
+  document.getElementById('svetlo-zavrit').addEventListener('click',function(){dlg.close()});
+  document.getElementById('svetlo-zpet').addEventListener('click',function(){ukaz(ktera-1)});
+  document.getElementById('svetlo-dal').addEventListener('click',function(){ukaz(ktera+1)});
+  dlg.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')ukaz(ktera-1);if(e.key==='ArrowRight')ukaz(ktera+1)});
+  dlg.addEventListener('click',function(e){if(e.target===dlg||e.target.classList.contains('svetlo-stred'))dlg.close()});
+  dlg.addEventListener('close',function(){img.removeAttribute('src');odkazy[ktera].focus()});
+})();
+</script>
+</body>
+</html>
