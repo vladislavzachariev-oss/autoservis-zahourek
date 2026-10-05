@@ -87,12 +87,12 @@ h1 span{display:block}
 
 /* služby */
 .prace{display:grid;grid-template-columns:minmax(0,1fr);column-gap:2.5rem}
-.prace li{border-top:2px solid var(--cerna);padding:.85rem 0 1.15rem;min-width:0}
-.prace h3{font-weight:800;font-stretch:88%;font-size:1.5rem;line-height:1.1;text-transform:uppercase}
-.prace p{margin-top:.3rem;color:var(--seda);max-width:26rem}
-.prace .zdarma h3{display:inline;background:var(--zluta);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.05em .3em;margin-left:-.3em}
-.prace .zdarma p{margin-top:.45rem}
-.take{border-top:2px solid var(--cerna);padding-top:.9rem;max-width:44rem}
+.prace li{display:grid;grid-template-columns:minmax(0,1fr);gap:.2rem 2rem;border-top:2px solid var(--cerna);padding:.8rem 0 1rem;min-width:0}
+.prace h3{font-weight:800;font-stretch:88%;font-size:clamp(1.5rem,6.6vw,1.75rem);line-height:1.08;text-transform:uppercase}
+.prace p{color:var(--seda)}
+.prace .zdarma{background:var(--zluta);padding-inline:.85rem}
+.prace .zdarma p{color:var(--cerna)}
+.take{padding-top:1rem;max-width:44rem}
 
 /* fotky */
 .tmava{background:var(--cerna);color:var(--bila)}
@@ -156,10 +156,10 @@ h1 span{display:block}
 .svetlo-popis{font-weight:500}
 
 @media (min-width:34rem){
-  .prace{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fotky{grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
 }
 @media (min-width:44rem){
+  .prace li{grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:baseline}
   .hlasy{grid-template-columns:repeat(2,minmax(0,1fr))}
   .kontakt{grid-template-columns:repeat(2,minmax(0,1fr))}
   .mapa{grid-column:1 / -1;min-height:22rem}
@@ -174,7 +174,7 @@ h1 span{display:block}
   .uvod-bok{padding-bottom:.35rem}
 }
 @media (max-width:33.99rem){
-  body{padding-bottom:3.5rem}
+  .pata .frame{padding-bottom:5rem}
   .menu{width:100%;justify-content:space-between;gap:.5rem}
   .lista-tel{position:fixed;left:0;right:0;bottom:0;z-index:10;border-radius:0;text-align:center;font-size:1.1875rem;
     padding:.8rem 1rem calc(.8rem + env(safe-area-inset-bottom));border-top:2px solid var(--cerna)}
